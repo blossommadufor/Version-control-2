@@ -165,11 +165,136 @@ body {
     transform: translateY(-2px);
 }
 
-@media (max-width: 900px) {
-    .about {
-        flex-direction: column-reverse;
-        padding: 2.5rem 1.5rem;
-    }
+
+/* CONTACT SECTION */
+
+.contact {
+    max-width: 1200px;
+    margin: 0 auto 5rem auto;
+    padding: 4rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-form-container {
+    flex: 1;
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.25rem;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #3c2a4d;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #7c3aed;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: #3c2a4d;
+    color: #ffffff;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #2a1d37;
+}
+
+.contact-info h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #3c2a4d;
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.contact-details {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-details li {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 0.8rem;
+}
+
+
+/* FOOTER SECTION */
+
+.site-footer {
+    background-color: #3c2a4d;
+    color: #ffffff;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.site-footer p {
+    font-size: 0.9rem;
+    color: #d1d5db;
+}
+
+.footer-links a {
+    color: #d1d5db;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
 }
 
 
@@ -189,5 +314,23 @@ body {
     }
     .hero-media img {
         height: 350px;
+    }
+    .about {
+        flex-direction: column-reverse;
+        padding: 2.5rem 1.5rem;
+    }
+    .contact {
+        flex-direction: column;
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-links a {
+        margin: 0 0.75rem;
     }
 }
