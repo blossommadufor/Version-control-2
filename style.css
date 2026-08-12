@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,46 +6,113 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fff9f5;
-    color: #333;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: #faf8f5;
+    color: #2d2d2d;
     line-height: 1.6;
+    min-height: 100vh;
 }
 
+
+/* HERO SECTION */
+
 .hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 4rem 8%;
-    min-height: 80vh;
-    gap: 2rem;
+    gap: 4rem;
+    min-height: 90vh;
 }
 
 .hero-text {
     flex: 1;
-    max-width: 550px;
+    max-width: 560px;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #f0e7ff;
+    color: #6b21a8;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    margin-bottom: 1.5rem;
 }
 
 .hero-text h1 {
-    font-size: 3rem;
-    color: #7c4dff;
-    margin-bottom: 1rem;
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #1e1b4b;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.25rem;
 }
 
 .hero-text p {
-    font-size: 1.2rem;
-    color: #555;
+    font-size: 1.125rem;
+    color: #4b5563;
+    margin-bottom: 2.25rem;
+    font-weight: 400;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: #7c3aed;
+    color: #ffffff;
+    padding: 1rem 2.25rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px -5px rgba(124, 58, 237, 0.4);
+    transition: all 0.25s ease;
+}
+
+.btn-primary:hover {
+    background: #6d28d9;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 24px -5px rgba(124, 58, 237, 0.5);
 }
 
 .hero-media {
     flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .hero-media img {
     width: 100%;
     max-width: 500px;
-    height: auto;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    display: block;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.12);
+}
+
+
+/* RESPONSIVE LAYOUT */
+
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 3rem 1.5rem;
+    }
+    .hero-text {
+        max-width: 100%;
+    }
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+    .hero-media img {
+        height: 350px;
+    }
 }
