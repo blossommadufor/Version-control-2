@@ -17,7 +17,6 @@ A single-page marketing website built with HTML and CSS using Git multi-branch w
 - Demonstrated commit reversion using `git revert` to undo experimental styling changes safely.
 - Renamed feature branches locally and synchronized remote tracking branches using `git fetch --all --prune`.
 
-
 ## SCREENSHOTS
 
 ![Merged Pull Requests](./screenshots/merge1.png)
